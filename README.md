@@ -1,54 +1,63 @@
 # Personal sing-box Workspace
 
-A customized **sing-box** configuration and management suite optimized for Android (via Box modules) and Windows (via enhanced PowerShell scripts).
+A high-performance **sing-box** configuration and management suite for Android (Magisk/Box modules) and Windows.
 
 ---
 
-## 📂 File Descriptions
+## 📋 Prerequisites
 
-* **`config.json`** Core configuration template featuring Clash API, DNS over QUIC/HTTP3, and FakeIP support.
-* **`webRTC.json`** Specialized rule-set for managing, optimizing, or blocking WebRTC/STUN traffic.
-* **`singbox-manager.ps1`** An advanced Windows manager with a Cyberpunk-style UI, real-time log monitoring, and service controls.
-* **`start-manager.bat`** A portable one-click launcher that allows you to run the manager from any directory.
-
----
-
-## ⚙️ Requirements
-
-### 1. The Core (Mandatory)
+### The Core (Mandatory)
 This setup **requires** the **[reF1nd fork](https://github.com/reF1nd/sing-box)** of sing-box.
-> **Note:** This configuration relies on `proxy_providers` and `rule_providers` for automated subscription and rule-set management. These features are currently not supported in the official upstream version.
-
-### 2. Android
-Recommended for use with the **box** (Box, Box4Magisk) module for system-wide transparent proxying.
+* **Why?** It enables `proxy_providers` and `rule_providers` for remote subscription management, which are not available in the official upstream version.
 
 ---
 
-## 🚀 Windows Usage Guide
+## 💻 Windows Setup Guide
 
-### 1. File Placement & Naming
-For the `singbox-manager.ps1` script to function correctly, the following files **must** be placed in the **same directory** and use these exact names:
-* **Binary**: `sing-box.exe`
-* **Configuration**: `config.json` (You may rename `config_wins.json` to `config.json` after editing).
-* **Manager**: `singbox-manager.ps1`
+### 1. Directory & File Naming
+For the management scripts to function, you must place the following files in the **same folder** and use these exact names:
 
-### 2. Configure the Launcher
-The `start-manager.bat` can be placed anywhere (e.g., your Desktop) for convenience:
-* Right-click `start-manager.bat` and select **Edit**.
-* Locate the line `set "TARGET_DIR=..."` and change the path to the folder where your `sing-box.exe` is actually stored.
+| File | Requirement |
+| :--- | :--- |
+| **`sing-box.exe`** | The binary from reF1nd fork. |
+| **`config.json`** | Your main config (rename `server_templates.json` to this). |
+| **`singbox-manager.ps1`** | The PowerShell management script. |
 
-### 3. Execution
-Double-click `start-manager.bat` to:
-* Automatically request Administrator privileges.
-* Launch the PowerShell Manager menu to install services, toggle the system proxy, or monitor traffic.
+### 2. Portable Launcher (`start-manager.bat`)
+You can place `start-manager.bat` anywhere (e.g., Desktop) to avoid navigating folders:
+1.  Right-click `start-manager.bat` -> **Edit**.
+2.  Change the `TARGET_DIR` to your actual sing-box folder path:
+    `set "TARGET_DIR=D:\Path\To\Your\sing-box"`
+3.  **Run**: Double-click the `.bat` to launch the Cyberpunk-style manager with Admin privileges.
+
+---
+
+## 📱 Android Setup Guide (Box Modules)
+
+Optimized for **Box4Magisk**, **KM-Box**, or similar Magisk-based transparent proxy modules.
+
+### 1. Configuration Deployment
+1.  Locate your module's configuration directory (usually `/data/adb/box/` or `/data/adb/sing-box/`).
+2.  Upload `config_box.json` and rename it to `config.json` within that folder.
+3.  Upload `webRTC.json` to the `rule_set` subfolder (or as specified in your `config.json` paths).
+
+### 2. Core Replacement
+Ensure the binary used by the module is the **reF1nd fork**:
+* Replace the file at `/data/adb/box/bin/sing-box` with the reF1nd Android binary.
+* Set permissions to `0755` (rwxr-xr-x) using a file manager like MT Manager or via terminal:
+  `chmod +x /data/adb/box/bin/sing-box`
+
+### 3. Usage
+* Use the module's dashboard or terminal command (e.g., `box start`) to initialize.
+* Check logs via `/data/adb/box/run/runs.log` to ensure rule-sets are downloading correctly.
 
 ---
 
-## 🛠 Key Features
-* **Portable Launcher**: Run your manager from any location without navigating to the program folder.
-* **Smart Routing**: Pre-configured rules for Google, Telegram, YouTube, and AWAvenue/217heidai ad-blocking.
-* **System Integration**: Easily register sing-box as a Windows Service for silent, background operation and auto-start on boot.
-* **Customizable**: Script variables for file names and paths can be modified within the `.ps1` file if you have specific naming preferences.
+## 🛠 Features
+* **Smart Routing**: Advanced rules for Google, Telegram, YouTube, and Bilibili.
+* **Ad-Blocking**: Integrated `AWAvenue-Ads` for a cleaner browsing experience.
+* **Enhanced DNS**: High-concurrency DNS settings over QUIC and HTTP/3.
+* **Windows Service**: Easily install sing-box as a background service via the PS1 script.
 
 ---
-*Disclaimer: For personal use and educational purposes only.*
+*Disclaimer: For personal use and technical research only.*
