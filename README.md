@@ -21,7 +21,7 @@ A streamlined config set for **Android** and **Windows**, optimized for the **[r
 
 1.  **Preparation**: Rename `config_wins.json` to `config.json` and ensure your core is named `sing-box.exe`.
 2.  **Configure**: Edit `start-manager.bat` and set `TARGET_DIR` to your actual folder path.
-3.  **Run**: Place `start-manager.bat` anywhere and double-click to launch the Cyberpunk-style manager.
+3.  **Run**: Place `start-manager.bat` anywhere and double-click to launch the manager.
 
 ## 📱 Android Guide
 
