@@ -13,7 +13,7 @@ A streamlined config set for **Android** and **Windows**, optimized for the **[r
 | Platform | Config File | Target Directory | Management Tool |
 | :--- | :--- | :--- | :--- |
 | **Windows** | `config_wins.json` | Same folder as `sing-box.exe` | `start-manager.bat` |
-| **Android** | `config_box.json` | `/data/adb/box/` | Box4Magisk / KM-Box |
+| **Android** | `config_box.json` | `/data/adb/box/` | Box4Magisk / Box |
 
 ---
 
