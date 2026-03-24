@@ -102,7 +102,7 @@
   "route": {
     "final": "📦 CATCH_ALL",
     "auto_detect_interface": true,
-    "default_domain_resolver": "direct_dns_server",
+    "default_domain_resolver": "tx_doh_dns",
     "default_domain_match_strategy": "prefer_fqdn",
     "rules": [
       {"network": "icmp", "outbound": "direct"},
