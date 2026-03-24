@@ -9,7 +9,7 @@ This repository contains my personal configurations and helper scripts for **sin
 
 ## 📋 Overview
 
-* **`config_box.json`**: This is a configuration file designed for the **sing-box core** (bare core).
+* **`config_box.json`**: This is a config designed for the **sing-box core** (bare core).
 * **Recommended Platform**: For the best experience on Android, it is highly recommended to use this with the **box** (Box4Magisk / BoxForMagisk) module.
 
 ---
