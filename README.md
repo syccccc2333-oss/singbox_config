@@ -4,7 +4,7 @@
 ## 📋 Prerequisites
 
 ### The Core (Mandatory)
-A streamlined configuration set for **Android** and **Windows**, optimized for the **[reF1nd fork](https://github.com/reF1nd/sing-box)** (required for `proxy_providers`).
+A streamlined config set for **Android** and **Windows**, optimized for the **[reF1nd fork](https://github.com/reF1nd/sing-box)** (required for `proxy_providers`).
 
 ---
 
