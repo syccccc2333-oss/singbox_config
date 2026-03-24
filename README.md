@@ -40,4 +40,4 @@ The scripts in this repository help with:
 
 ---
 
-*Disclaimer: These configurations are for personal use and testing purposes only.*
+**Disclaimer:** These configurations are for personal use and testing purposes only.*
