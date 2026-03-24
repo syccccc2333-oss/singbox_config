@@ -1,5 +1,5 @@
-# singbox_config
-My sing-box Configs &amp; Scripts
+# singbox_config, my sing-box Configs &amp; Scripts
+
 -------
 # Personal sing-box Configurations & Scripts
 
