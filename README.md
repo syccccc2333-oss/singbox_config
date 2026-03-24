@@ -6,7 +6,7 @@ A customized **sing-box** configuration and management suite optimized for Andro
 
 ## 📂 File Descriptions
 
-* **`server_templates.json`** Core configuration template featuring Clash API, DNS over QUIC/HTTP3, and FakeIP support.
+* **`config.json`** Core configuration template featuring Clash API, DNS over QUIC/HTTP3, and FakeIP support.
 * **`webRTC.json`** Specialized rule-set for managing, optimizing, or blocking WebRTC/STUN traffic.
 * **`singbox-manager.ps1`** An advanced Windows manager with a Cyberpunk-style UI, real-time log monitoring, and service controls.
 * **`start-manager.bat`** A portable one-click launcher that allows you to run the manager from any directory.
@@ -29,7 +29,7 @@ Recommended for use with the **box** (Box, Box4Magisk) module for system-wide tr
 ### 1. File Placement & Naming
 For the `singbox-manager.ps1` script to function correctly, the following files **must** be placed in the **same directory** and use these exact names:
 * **Binary**: `sing-box.exe`
-* **Configuration**: `config.json` (You may rename `server_templates.json` to `config.json` after editing).
+* **Configuration**: `config.json` (You may rename `config_wins.json` to `config.json` after editing).
 * **Manager**: `singbox-manager.ps1`
 
 ### 2. Configure the Launcher
