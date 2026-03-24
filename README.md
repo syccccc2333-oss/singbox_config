@@ -1,43 +1,54 @@
-# singbox_config, my sing-box Configs &amp; Scripts
+# Personal sing-box Workspace
 
--------
-# Personal sing-box Configurations & Scripts
-
-This repository contains my personal configurations and helper scripts for **sing-box**.
+A customized **sing-box** configuration and management suite optimized for Android (via Box modules) and Windows (via enhanced PowerShell scripts).
 
 ---
 
-## 📋 Overview
+## 📂 File Descriptions
 
-* **`config_box.json`**: This is a config designed for the **sing-box core** (bare core).
-* **Recommended Platform**: For the best experience on Android, it is highly recommended to use this with the **box** (Box4Magisk / BoxForMagisk) module.
-
----
-
-## ⚠️ Important Requirement
-
-This setup specifically requires the **[reF1nd fork](https://github.com/reF1nd/sing-box)** of sing-box.
-
-> **Note:** This configuration relies on advanced features like `proxy_providers` and `rule_providers` which are essential for subscription management and automated rule updates. These features are not available in the upstream (official) sing-box core.
+* **`server_templates.json`**: Core configuration template featuring Clash API, DNS over QUIC/HTTP3, and FakeIP support.
+* **`webRTC.json`**: Specialized rule-set for managing, optimizing, or blocking WebRTC/STUN traffic.
+* **`singbox-manager.ps1`**: An advanced Windows manager with a Cyberpunk-style UI, real-time log monitoring, and service controls.
+* **`start-manager.bat`**: A portable one-click launcher that allows you to run the manager from any directory.
 
 ---
 
-## 🚀 How to Use
+## ⚙️ Requirements
 
-1. **Install the Core**: Ensure you are using the **reF1nd fork** version of the sing-box binary.
-2. **Android Setup**: If you are on Android, install the **box module** (Box, e.g., Box4Magisk, box_for_magisk).
-3. **Replace Config**: Use `config_box.json` as your main configuration (you may need to rename it to `config.json` depending on your environment).
-4. **Run Scripts**: Use the included scripts to automate subscription updates or rule refreshing.
+### 1. The Core (Mandatory)
+This setup **requires** the **[reF1nd fork](https://github.com/reF1nd/sing-box)** of sing-box.
+> **Note:** This configuration relies on `proxy_providers` and `rule_providers` for automated subscription and rule-set management. These features are currently not supported in the official upstream version.
 
----
-
-## 🛠 Features of Included Scripts
-
-The scripts in this repository help with:
-* Updating subscription links.
-* Managing core services.
-* Automating rule provider refreshes.
+### 2. Android
+Recommended for use with the **box** (Box4Magisk) module for system-wide transparent proxying.
 
 ---
 
-*Disclaimer: These configurations are for personal use and testing purposes only.*
+## 🚀 Windows Usage Guide
+
+### 1. File Placement & Naming
+For the `singbox-manager.ps1` script to function correctly, the following files **must** be placed in the **same directory** and use these exact names:
+* **Binary**: `sing-box.exe`
+* **Configuration**: `config.json` (You may rename `server_templates.json` to `config.json` after editing).
+* **Manager**: `singbox-manager.ps1`
+
+### 2. Configure the Launcher
+The `start-manager.bat` can be placed anywhere (e.g., your Desktop) for convenience:
+* Right-click `start-manager.bat` and select **Edit**.
+* Locate the line `set "TARGET_DIR=..."` and change the path to the folder where your `sing-box.exe` is actually stored.
+
+### 3. Execution
+Double-click `start-manager.bat` to:
+* Automatically request Administrator privileges.
+* Launch the PowerShell Manager menu to install services, toggle the system proxy, or monitor traffic.
+
+---
+
+## 🛠 Key Features
+* **Portable Launcher**: Run your manager from any location without navigating to the program folder.
+* **Smart Routing**: Pre-configured rules for Google, Telegram, YouTube, and AWAvenue/217heidai ad-blocking.
+* **System Integration**: Easily register sing-box as a Windows Service for silent, background operation and auto-start on boot.
+* **Customizable**: Script variables for file names and paths can be modified within the `.ps1` file if you have specific naming preferences.
+
+---
+*Disclaimer: For personal use and educational purposes only.*
