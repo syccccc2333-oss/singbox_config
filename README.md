@@ -26,8 +26,7 @@ A streamlined config set for **Android** and **Windows**, optimized for the **[r
 ## 📱 Android Guide
 
 1.  **Config**: Upload `config_box.json` to your module's config folder (rename to `config.json`).
-2.  **Rules**: Place `webRTC.json` in the `rule_set` directory.
-3.  **Core**: Replace the module's default binary with the **reF1nd fork** (chmod `0755`).
+2.  **Core**: Replace the module's default binary with the **reF1nd fork** (chmod `0755`).
 
 ---
 
