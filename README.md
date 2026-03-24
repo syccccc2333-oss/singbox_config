@@ -25,7 +25,7 @@ This setup specifically requires the **[reF1nd fork](https://github.com/reF1nd/s
 ## 🚀 How to Use
 
 1. **Install the Core**: Ensure you are using the **reF1nd fork** version of the sing-box binary.
-2. **Android Setup**: If you are on Android, install the **box module** (e.g., Box4Magisk).
+2. **Android Setup**: If you are on Android, install the **box module** (Box, e.g., Box4Magisk, box_for_magisk).
 3. **Replace Config**: Use `config_box.json` as your main configuration (you may need to rename it to `config.json` depending on your environment).
 4. **Run Scripts**: Use the included scripts to automate subscription updates or rule refreshing.
 
