@@ -48,6 +48,7 @@
       {"tag": "fakeip_dns_server", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
     "rules": [
+      {"ip_accept_any": true, "server": "dns_hosts"},
       {"clash_mode": "Global", "query_type": ["SVCB", "HTTPS"], "action": "reject"},
       {"clash_mode": "Global", "query_type": ["A", "AAAA"], "server": "fakeip_dns_server", "rewrite_ttl": 1},
       {"clash_mode":"Global","server":"proxy_dns_server"},
