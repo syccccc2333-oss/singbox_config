@@ -112,7 +112,6 @@
       {"domain": ["Mijia Cloud"], "domain_suffix": ["push.apple.com"], "rule_set": ["telegram_ip"], "invert": true, "action": "sniff"},
       {"protocol": "dns", "action": "hijack-dns"},
       {"udp_disable_domain_unmapping": true, "udp_connect": true, "action": "route-options"},
-      {"ip_is_private": true, "rule_set": "private", "outbound": "direct"},
       {"clash_mode": "Global", "outbound": "GLOBAL"},
       {"clash_mode": "Direct", "outbound": "direct"},
       {"package_name": ["tech.lolli.toolbox"], "outbound": "direct"}, // ssh客户端serverbox直连
@@ -120,6 +119,7 @@
       {"domain": ["abyss.cyapi.cn", "ad.cyapi.cn", "gather.colorfulclouds.net"], "action": "reject"},
       {"domain_suffix": ["steamserver.net"], "outbound": "direct"},
       {"protocol": "quic", "rule_set": "youtube", "action": "reject"},
+      {"ip_is_private": true, "rule_set": "private", "outbound": "direct"},
       {"rule_set": "apple", "outbound": "🍎 Apple"},
       {"rule_set": "bilibili", "outbound": "📺 StreamingME"},
       {"rule_set": "bahamut", "outbound": "🍍 Taiwan"},
