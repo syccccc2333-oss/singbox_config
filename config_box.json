@@ -62,10 +62,10 @@
        "alt6-mtalk.google.com", "alt7-mtalk.google.com", "alt8-mtalk.google.com", "dl.google.com", "dl.l.google.com"], "server": "dns_hosts"},
       {"clash_mode":"Global","server":"proxy_dns_server"},
       {"clash_mode": "Direct", "server": "direct_dns_server", "strategy": "ipv4_only"},
-      {"query_type": ["SVCB", "HTTPS"], "action": "reject"},
       {"domain": ["a0.app.xiaomi.com", "appversion.115.com"], "server": "direct_dns_server"},
       {"rule_set": ["217heidai-Ads"], "action": "predefined", "rcode": "NOERROR"},
       {"domain_suffix": ["market.xiaomi.com", "lancache.steamcontent.com"], "rule_set": ["cn", "private"], "server": "direct_dns_server"},
+      {"query_type": ["SVCB", "HTTPS"], "action": "reject"},
       {"type": "logical", "mode": "or", "rules": [{"query_type": "PTR"}, {"domain_keyword": ["wifi.fiberhome"]}], "action": "predefined", "rcode": "NXDOMAIN"},
       {"query_type": ["A", "AAAA"], "server": "fakeip_dns_server", "rewrite_ttl": 1},
       {"rule_set": "gfw", "server": "proxy_dns_server"}
