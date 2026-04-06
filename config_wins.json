@@ -68,8 +68,7 @@
   "inbounds": [
     {"tag": "mixed-in", "type": "mixed", "listen": "0.0.0.0", "listen_port": 7890, "set_system_proxy": false},
     {"tag": "tun-in", "type": "tun", "interface_name": "tun0", "address": ["172.19.0.1/30", "fdfe:dcba:9876::1/126"],
-     "mtu": 9000, "auto_route": true, "strict_route": true, "auto_redirect": false, "stack": "system",
-     "platform": {"http_proxy": {"enabled": true, "server": "127.0.0.1", "server_port": 7890}}}
+     "mtu": 9000, "auto_route": true, "strict_route": true, "auto_redirect": false, "stack": "system"}
   ],
   "outbounds": [
     {"tag": "📦 CATCH_ALL", "type": "selector", "outbounds": ["🍹 Hong Kong", "🍍 Taiwan", "🎡 Singapore", "⛩️ Japan", "🗽 United States", "🗺️ Other regions"], "interrupt_exist_connections": true},
