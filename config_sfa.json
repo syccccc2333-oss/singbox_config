@@ -1,5 +1,5 @@
 {
-  "log": {"level": "warn", "timestamp": true, "output": "/data/adb/box/run/sing-box.log"},
+  "log": {"level": "warn", "timestamp": true},
   "experimental": {
     "urltest_unified_delay": true,
     "cache_file": {"enabled": true, "store_fakeip": true, "store_dns": true}, // 遇到各种奇怪的问题，实在搞不明白，可以尝试"store_dns": false
