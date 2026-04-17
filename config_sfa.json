@@ -1,8 +1,8 @@
 {
-  "log": {"level": "warn", "timestamp": true, "output": "/data/adb/box/run/sing-box.log"},
+  "log": {"level": "warn", "timestamp": true},
   "experimental": {
     "urltest_unified_delay": true,
-    "cache_file": {"path": "./cache.db", "enabled": true, "store_fakeip": true, "store_dns": true}, // 遇到各种奇怪的问题，实在搞不明白，可以尝试"store_dns": false
+    "cache_file": {"enabled": true, "store_fakeip": true, "store_dns": true}, // 遇到各种奇怪的问题，实在搞不明白，可以尝试"store_dns": false
     "debug": {"gc_percent": 50, "memory_limit": "100MB"}, // 内存限制选项，清理堆栈垃圾。具体分析：https://github.com/SagerNet/sing-box/blob/dev-next/option%2Fdebug.go，可以查看这篇文章简单了解下Go的GC：https://blog.csdn.net/yuff100/article/details/136085733?utm_source=copilot.com
     "clash_api": {
       "external_controller": "[::]:9090",
@@ -23,7 +23,6 @@
       "url": "订阅链接",
       "http_client": "direct_client",
       "update_interval": "24h0m0s",
-      "path": "./providers/A.json",
       "health_check": {"enabled": true, "url": "https://www.gstatic.com/generate_204", "interval": "60m0s", "timeout": "3s"},
       "override_dialer": {} // 拨号字段，看情况自己设置，可以留空，https://github.com/reF1nd/sing-box/blob/reF1nd-testing/docs/configuration/provider/index.zh.md
     }
@@ -43,7 +42,7 @@
       {"tag": "ali_dns", "type": "quic", "server": "dns.alidns.com", "domain_resolver": "dns_hosts"},
       {"tag": "google_dns", "type": "https", "server": "dns.google", "domain_resolver": "dns_hosts", "detour": "📦 CATCH_ALL"},
       {"tag": "quad9_dns", "type": "https", "server": "dns.quad9.net", "domain_resolver": "dns_hosts", "detour": "📦 CATCH_ALL"},
-      {"tag": "direct_server", "type": "group", "servers": ["isp_ct1", "isp_ct2", "ali_dns", "tx_dns"]},
+      {"tag": "direct_server", "type": "group", "servers": ["ali_dns", "tx_dns"]},
       {"tag": "proxy_server", "type": "group", "servers": ["google_dns", "quad9_dns"]},
       {"tag": "fakeip_server", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
@@ -107,7 +106,7 @@
       {"clash_mode": "Global", "outbound": "GLOBAL"},
       {"clash_mode": "Direct", "outbound": "direct"},
       {"package_name": ["tech.lolli.toolbox"], "outbound": "direct"}, // ssh客户端直连
-      {"rule_set": ["AWAvenue-Ads", "webRTC", "adobe"], "action": "reject", "method": "drop"}, // adobe是为了屏蔽Adobe旗下软件的正版联网验证，可选择性删除
+      {"rule_set": ["217heidai-Ads", "webRTC", "adobe"], "action": "reject", "method": "drop"}, // adobe是为了屏蔽Adobe旗下软件的正版联网验证，可选择性删除
       {"domain_suffix": ["steamserver.net"], "outbound": "direct"},
       {"protocol": "quic", "rule_set": ["youtube"], "action": "reject"},
       {"ip_is_private": true, "rule_set": ["private"], "outbound": "direct"},
