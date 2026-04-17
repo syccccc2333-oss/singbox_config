@@ -43,7 +43,7 @@
       {"tag": "ali_dns", "type": "quic", "server": "dns.alidns.com", "domain_resolver": "dns_hosts"},
       {"tag": "google_dns", "type": "https", "server": "dns.google", "domain_resolver": "dns_hosts", "detour": "📦 CATCH_ALL"},
       {"tag": "quad9_dns", "type": "https", "server": "dns.quad9.net", "domain_resolver": "dns_hosts", "detour": "📦 CATCH_ALL"},
-      {"tag": "direct_server", "type": "group", "servers": ["isp_ct1", "isp_ct2", "ali_dns", "tx_dns"]},
+      {"tag": "direct_server", "type": "group", "servers": ["ali_dns", "tx_dns"]},
       {"tag": "proxy_server", "type": "group", "servers": ["google_dns", "quad9_dns"]},
       {"tag": "fakeip_server", "type": "fakeip", "inet4_range": "198.18.0.0/15", "inet6_range": "fc00::/18"}
     ],
